@@ -7,8 +7,8 @@ class Person:
         self.wife = None
         self.husband = None
 
-    def greet(self):
-        return f"Hello, my name is {self.name} and I am {self.age} years old."
+    def get_full_name(first_name: str, last_name: str) -> str:
+        return f"{first_name} {last_name}"
 
 
 def create_person_list(people: list[dict]) -> list:
