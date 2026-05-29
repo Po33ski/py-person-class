@@ -4,7 +4,7 @@ import os
 import pytest
 
 from app.main import create_person_list
-from app.person import Person
+from app.main import Person
 
 
 def path_to_main():
