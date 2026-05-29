@@ -21,3 +21,4 @@ def create_person_list(people: list[dict]) -> list:
                 Person.people[person["husband"]]
             )
     return person_instances
+
