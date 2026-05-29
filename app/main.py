@@ -4,7 +4,9 @@ class Person:
         self.name = name
         self.age = age
         Person.people[self.name] = self
-        
+        self.wife = None
+        self.husband = None
+
 
 
     @staticmethod
