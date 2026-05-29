@@ -11,16 +11,13 @@ class Person:
         return f"Hello, my name is {self.name} and I am {self.age} years old."
 
 
-def create_person_list(people: list) -> list:
-    person_class_list = list(map(lambda person_dict: Person(name=person_dict["name"], age=person_dict["age"]), people))
+def create_person_list(people: list[dict]) -> list:
+    person_instances = [Person(person["name"], person["age"]) for person in people]
     for person_dict in people:
         person_instance = Person.people[person_dict["name"]]
         if person_dict.get("wife"):
             person_instance.wife = Person.people[person_dict["wife"]]
         if person_dict.get("husband"):
             person_instance.husband = Person.people[person_dict["husband"]]
-    return person_class_list
-
-
-            
+    return person_instances
 
